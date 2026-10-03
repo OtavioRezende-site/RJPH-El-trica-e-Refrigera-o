@@ -12,18 +12,18 @@ interface FAQAccordionProps {
 }
 
 export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items, className = '' }) => {
-  const [openIndexes, setOpenIndexes] = useState<number[]>([0]);
+  // Apenas uma pergunta aberta por vez (inicia com a primeira aberta)
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleIndex = (index: number) => {
-    setOpenIndexes((prev) =>
-      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
-    );
+    // Se clicar na que já está aberta, fecha. Se clicar em outra, abre apenas a nova e fecha a anterior.
+    setOpenIndex((prev) => (prev === index ? null : index));
   };
 
   return (
     <div className={`divide-y divide-slate-200 border-y border-slate-200 ${className}`}>
       {items.map((item, index) => {
-        const isOpen = openIndexes.includes(index);
+        const isOpen = openIndex === index;
         const headingId = `faq-heading-${index}`;
         const panelId = `faq-panel-${index}`;
 
@@ -36,7 +36,7 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items, className = '
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => toggleIndex(index)}
-                className="w-full flex items-center justify-between text-left font-semibold text-base sm:text-lg text-slate-900 hover:text-[#004B87] transition-colors gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0077B6] rounded-lg py-1"
+                className="w-full flex items-center justify-between text-left font-semibold text-base sm:text-lg text-slate-900 hover:text-[#004B87] transition-colors gap-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0077B6] rounded-lg py-1 cursor-pointer"
               >
                 <span>{item.question}</span>
                 <ChevronDown

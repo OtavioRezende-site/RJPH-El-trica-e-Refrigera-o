@@ -6,11 +6,13 @@
     <script type="text/javascript">
       // Single Page Apps for GitHub Pages redirection script
       // Preserves paths and query parameters when refreshing deep routes
-      var segmentCount = 1;
       var l = window.location;
-      // If hosted directly on custom domain or root, keep 0 segments
+      var segmentCount = 1;
       if (l.hostname.indexOf('github.io') === -1 || l.pathname.split('/').length <= 2) {
         segmentCount = 0;
+      }
+      if (l.pathname.indexOf('/docs') !== -1) {
+        segmentCount = 2;
       }
       l.replace(
         l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +

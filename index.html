@@ -30,6 +30,18 @@
 
     <!-- GitHub Pages Single Page Apps Routing Support -->
     <script type="text/javascript">
+      // 1. If unbuilt source HTML is loaded on GitHub Pages (branch root /), route to pre-compiled /docs/
+      document.addEventListener('DOMContentLoaded', function() {
+        var isUnbuiltRoot = !!document.querySelector('script[src*="main.tsx"]');
+        if (isUnbuiltRoot && window.location.hostname.indexOf('github.io') !== -1) {
+          var repoBase = window.location.pathname.replace(/\/$/, '');
+          if (repoBase.indexOf('/docs') === -1) {
+            window.location.replace(repoBase + '/docs/' + window.location.search + window.location.hash);
+          }
+        }
+      });
+
+      // 2. Decode SPA redirected parameters
       (function(l) {
         if (l.search[1] === '/' || (l.search.indexOf('?p=/') === 0)) {
           var pIndex = l.search.indexOf('p=/');
