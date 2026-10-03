@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+:root {
+  --brand-primary: #004B87;
+  --brand-primary-light: #0077B6;
+  --brand-primary-dark: #07264a;
+  --brand-secondary: #0B192C;
+  --brand-secondary-light: #1E293B;
+  --brand-secondary-dark: #060D17;
+  --brand-accent: #00B4D8;
+  --brand-accent-hover: #0096C7;
+  --brand-dark: #0B192C;
+  --brand-background: #F8FAFC;
+  --brand-background-alt: #F1F5F9;
+  --brand-surface: #FFFFFF;
+  --brand-surface-dark: #0F172A;
+  --brand-text: #0F172A;
+  --brand-text-inverse: #FFFFFF;
+  --brand-muted: #64748B;
+  --brand-border: #E2E8F0;
+
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar for modern browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Safe bottom spacing for mobile conversion bar */
+.pb-mobile-bar {
+  padding-bottom: calc(4.75rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 768px) {
+  .pb-mobile-bar {
+    padding-bottom: 0px;
+  }
+}
+
+/* ==========================================================================
+   GoHighLevel Chat Widget Size Containment
+   Prevents the chat widget from expanding to full screen (100vw / 100vh).
+   Forces it into a compact, elegant popup window.
+   ========================================================================== */
+
+/* Overrides when opened or full-screen styles are applied by GHL */
+chat-widget[style*="100%"],
+chat-widget[style*="100vw"],
+chat-widget[style*="100vh"],
+chat-widget[style*="inset: 0"],
+chat-widget[style*="top: 0"],
+chat-widget[style*="top:0"],
+#leadconnector-chat-widget[style*="100%"],
+#leadconnector-chat-widget[style*="100vw"],
+#leadconnector-chat-widget[style*="100vh"],
+div[id*="leadconnector-chat"][style*="100%"],
+div[id*="leadconnector-chat"][style*="100vw"],
+div[id*="leadconnector-chat"][style*="100vh"],
+iframe[src*="chat-widget"][style*="100%"],
+iframe[src*="chat-widget"][style*="100vw"],
+iframe[src*="chat-widget"][style*="100vh"] {
+  width: 380px !important;
+  height: 560px !important;
+  max-width: calc(100vw - 32px) !important;
+  max-height: min(580px, 80vh) !important;
+  top: auto !important;
+  left: auto !important;
+  right: 24px !important;
+  bottom: 24px !important;
+  border-radius: 18px !important;
+  overflow: hidden !important;
+  box-shadow: 0 20px 40px -10px rgba(11, 25, 44, 0.4), 0 0 0 1px rgba(0, 75, 135, 0.15) !important;
+}
+
+@media (max-width: 640px) {
+  chat-widget[style*="100%"],
+  chat-widget[style*="100vw"],
+  chat-widget[style*="100vh"],
+  chat-widget[style*="inset: 0"],
+  chat-widget[style*="top: 0"],
+  chat-widget[style*="top:0"],
+  #leadconnector-chat-widget[style*="100%"],
+  #leadconnector-chat-widget[style*="100vw"],
+  #leadconnector-chat-widget[style*="100vh"],
+  div[id*="leadconnector-chat"][style*="100%"],
+  div[id*="leadconnector-chat"][style*="100vw"],
+  div[id*="leadconnector-chat"][style*="100vh"],
+  iframe[src*="chat-widget"][style*="100%"],
+  iframe[src*="chat-widget"][style*="100vw"],
+  iframe[src*="chat-widget"][style*="100vh"] {
+    width: calc(100vw - 28px) !important;
+    max-width: 380px !important;
+    height: min(530px, 75vh) !important;
+    max-height: 75vh !important;
+    top: auto !important;
+    left: auto !important;
+    right: 14px !important;
+    bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+    border-radius: 16px !important;
+  }
+}

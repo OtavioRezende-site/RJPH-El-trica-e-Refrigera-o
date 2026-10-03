@@ -1,0 +1,6 @@
+{
+  "name": "RJPH Elétrica e Refrigeração",
+  "description": "Website oficial da RJPH Elétrica e Refrigeração. Instalação de ar-condicionado, refrigeração e serviços elétricos com atendimento direto e profissional.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

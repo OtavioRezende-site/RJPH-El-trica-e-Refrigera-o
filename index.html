@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>RJPH Elétrica e Refrigeração | Ar-Condicionado e Elétrica</title>
+    <meta
+      name="description"
+      content="Instalação de ar-condicionado, refrigeração e serviços elétricos com atendimento direto da RJPH Elétrica e Refrigeração. Fale conosco pelo WhatsApp ou telefone."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="RJPH Elétrica e Refrigeração" />
+    <meta property="og:title" content="RJPH Elétrica e Refrigeração | Ar-Condicionado e Elétrica" />
+    <meta
+      property="og:description"
+      content="Instalação de ar-condicionado, refrigeração e serviços elétricos com atendimento direto e profissional. Solicite seu orçamento com a RJPH."
+    />
+    <meta property="og:locale" content="pt_BR" />
+    
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="RJPH Elétrica e Refrigeração | Ar-Condicionado e Elétrica" />
+    <meta
+      name="twitter:description"
+      content="Instalação de ar-condicionado, refrigeração e serviços elétricos com atendimento direto. Fale conosco pelo WhatsApp."
+    />
+
+    <!-- GitHub Pages Single Page Apps Routing Support -->
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' || (l.search.indexOf('?p=/') === 0)) {
+          var pIndex = l.search.indexOf('p=/');
+          var decoded = '';
+          if (pIndex !== -1) {
+            var searchParams = new URLSearchParams(l.search);
+            var pVal = searchParams.get('p') || '';
+            var qVal = searchParams.get('q');
+            decoded = pVal + (qVal ? '?' + qVal.replace(/~and~/g, '&') : '');
+          } else {
+            decoded = l.search.slice(1).split('&').map(function(s) { 
+              return s.replace(/~and~/g, '&'); 
+            }).join('?');
+          }
+          var target = l.pathname.replace(/\/$/, '') + decoded + l.hash;
+          window.history.replaceState(null, null, target);
+        }
+      }(window.location));
+    </script>
+
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#F8FAFC] text-[#0F172A] antialiased selection:bg-[#00B4D8]/20 selection:text-[#004B87]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
