@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /thank-you
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: /sitemap.xml

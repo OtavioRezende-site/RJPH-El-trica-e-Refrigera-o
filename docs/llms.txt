@@ -1,0 +1,26 @@
+# RJPH Elétrica e Refrigeração
+
+> Climatização, refrigeração e serviços elétricos com atendimento técnico direto.
+
+A RJPH Elétrica e Refrigeração é uma empresa especializada em instalação de sistemas de ar-condicionado, serviços de refrigeração e soluções elétricas, com atendimento conduzido diretamente pelo profissional Rafael Santos.
+
+## Informações Oficiais de Contato
+- Telefone / WhatsApp: +55 21 99393-8068
+- Formato de Exibição: (21) 99393-8068
+- Instagram Oficial: @rafaelsantos_347 (https://www.instagram.com/rafaelsantos_347)
+- Google Business Profile: https://share.google/V2TRUD82nXoVRUBgm
+- Horário de Atendimento: Segunda-feira a Domingo, das 09:00 às 18:00 (todos os dias)
+
+## Serviços Prestados
+- Instalação de Ar-Condicionado: Dimensionamento e instalação adequada de equipamentos de climatização para eficiência e operação segura.
+- Serviços de Refrigeração: Avaliação, manutenção e suporte para equipamentos e circuitos de refrigeração.
+- Serviços Elétricos: Instalações, manutenções, quadros de distribuição e adequações elétricas residenciais e comerciais.
+
+## Navegação Principal
+- Início: /
+- Serviços: /services
+- Instalação de Ar-Condicionado: /services/instalacao-ar-condicionado
+- Refrigeração: /services/refrigeracao
+- Serviços Elétricos: /services/servicos-eletricos
+- Sobre: /about
+- Contato: /contact
